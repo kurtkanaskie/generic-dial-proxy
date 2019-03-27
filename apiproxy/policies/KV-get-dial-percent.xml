@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<KeyValueMapOperations async="false" continueOnError="false" enabled="true" name="KV-get-dial-percent" mapIdentifier="generic-dial">
+    <DisplayName>KV-get-dial-percent</DisplayName>
+    <ExpiryTimeInSecs>30</ExpiryTimeInSecs>
+    <Get assignTo="dialPercent" index="1">
+        <Key>
+            <Parameter>dialPercent</Parameter>
+        </Key>
+    </Get>
+    <Scope>environment</Scope>
+</KeyValueMapOperations>

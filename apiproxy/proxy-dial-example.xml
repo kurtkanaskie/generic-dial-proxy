@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy revision="6" name="proxy-dial-example">
+    <Basepaths>/oapi-barcode</Basepaths>
+    <ConfigurationVersion majorVersion="4" minorVersion="0"/>
+    <CreatedAt>1553630304488</CreatedAt>
+    <CreatedBy>kurtkanaskie@google.com</CreatedBy>
+    <Description></Description>
+    <DisplayName>dial-proxy</DisplayName>
+    <LastModifiedAt>1553697884906</LastModifiedAt>
+    <LastModifiedBy>kurtkanaskie@google.com</LastModifiedBy>
+    <ManifestVersion>SHA-512:ee746967decddf69ef73acf0580e8fa2a950584536a148b5d92c07ed5a530c273f25197fec65285b062f70b968e9063cf28ee9ff05ee4e4e4ea80faf249a89ae</ManifestVersion>
+    <Policies>
+        <Policy>AM-set-get-status-path-legacy</Policy>
+        <Policy>AM-set-get-status-path</Policy>
+        <Policy>JS-generic-dial</Policy>
+        <Policy>KV-get-dial-percent</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources>
+        <Resource>jsc://JS-generic-dial.js</Resource>
+    </Resources>
+    <Spec></Spec>
+    <TargetServers/>
+    <TargetEndpoints>
+        <TargetEndpoint>default</TargetEndpoint>
+        <TargetEndpoint>legacy</TargetEndpoint>
+    </TargetEndpoints>
+</APIProxy>
