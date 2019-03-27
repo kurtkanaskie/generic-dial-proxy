@@ -24,6 +24,7 @@ Note the different paths indicating different targets and variable values.
 * apigeetool addEntryToKVM -o {ORG} -e {ENV} --mapName generic-dial --entryName dialPercent --entryValue 20
 * apigeetool deployproxy -o {ORG} -e {ENV} -n proxy-dial-example -d .
 
+NOTE: due to an issue with Apigeetool the second target server does not get created automatically. You can simply create another target server in the UI and reference it (e.g. target-migration-old). They both can point to the `mocktarget.apigee.net` as this is just demonstrating the API proxy design.
 
 ## Disclaimer
 

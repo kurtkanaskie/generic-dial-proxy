@@ -25,7 +25,7 @@
     <HTTPTargetConnection>
         <Properties/>
         <LoadBalancer>
-            <Server name="target-migration-new"/>
+            <Server name="target-migration-old"/>
         </LoadBalancer>
         <Path>{statusPathLegacy}</Path>
         <SSLInfo>
