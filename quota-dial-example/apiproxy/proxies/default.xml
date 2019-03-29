@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProxyEndpoint name="default">
+    <Description/>
+    <FaultRules/>
+    <PreFlow name="PreFlow">
+        <Request>
+            <Step>
+                <Name>QU-dial</Name>
+            </Step>
+            <Step>
+                <Condition>(ratelimit.QU-dial.failed = true)</Condition>
+                <Name>QR-dial</Name>
+            </Step>
+        </Request>
+        <Response/>
+    </PreFlow>
+    <PostFlow name="PostFlow">
+        <Request/>
+        <Response/>
+    </PostFlow>
+    <Flows>
+        <Flow name="status">
+            <Description/>
+            <Request/>
+            <Response/>
+            <Condition>(proxy.pathsuffix MatchesPath "/status") and (request.verb = "GET")</Condition>
+        </Flow>
+    </Flows>
+    <HTTPProxyConnection>
+        <BasePath>/quota-dial</BasePath>
+        <Properties/>
+        <VirtualHost>secure</VirtualHost>
+    </HTTPProxyConnection>
+    <RouteRule name="new">
+        <Condition>(ratelimit.QU-dial.failed = true) AND (request.header.x-dial-to = "new")</Condition>
+        <TargetEndpoint>new</TargetEndpoint>
+    </RouteRule>
+    <RouteRule name="legacy">
+        <Condition>(ratelimit.QU-dial.failed = true) AND ( request.header.x-dial-to = "legacy")</Condition>
+        <TargetEndpoint>legacy</TargetEndpoint>
+    </RouteRule>
+    <RouteRule name="new">
+        <Condition>(ratelimit.QU-dial.failed = false) AND (request.header.x-dial-to = "legacy")</Condition>
+        <TargetEndpoint>new</TargetEndpoint>
+    </RouteRule>
+    <RouteRule name="legacy">
+        <Condition>(ratelimit.QU-dial.failed = false) AND (request.header.x-dial-to = "new")</Condition>
+        <TargetEndpoint>legacy</TargetEndpoint>
+    </RouteRule>
+    <RouteRule name="legacy">
+        <TargetEndpoint>legacy</TargetEndpoint>
+    </RouteRule>
+</ProxyEndpoint>

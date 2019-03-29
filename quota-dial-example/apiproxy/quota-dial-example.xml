@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy revision="5" name="quota-dial-example">
+    <Basepaths>/oapi-barcode</Basepaths>
+    <ConfigurationVersion majorVersion="4" minorVersion="0"/>
+    <CreatedAt>1553869918716</CreatedAt>
+    <CreatedBy>kurtkanaskie@google.com</CreatedBy>
+    <Description></Description>
+    <DisplayName>dial-proxy</DisplayName>
+    <LastModifiedAt>1553875428227</LastModifiedAt>
+    <LastModifiedBy>kurtkanaskie@google.com</LastModifiedBy>
+    <ManifestVersion>SHA-512:241c57af5153edf3d4762ca796f22582b886fc3f1f1e91e6915abea8ec07c04eaeec2cdf1e62a86cfa1ca3c9535377bc69c7cbfe32dcb9f53cf1229e81b0bbee</ManifestVersion>
+    <Policies>
+        <Policy>AM-set-get-status-path-legacy</Policy>
+        <Policy>AM-set-get-status-path</Policy>
+        <Policy>QR-dial</Policy>
+        <Policy>QU-dial</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources/>
+    <Spec></Spec>
+    <TargetServers/>
+    <TargetEndpoints>
+        <TargetEndpoint>legacy</TargetEndpoint>
+        <TargetEndpoint>new</TargetEndpoint>
+    </TargetEndpoints>
+</APIProxy>

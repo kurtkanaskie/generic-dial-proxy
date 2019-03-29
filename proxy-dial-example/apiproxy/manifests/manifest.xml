@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Manifest name="manifest">
+    <Policies>
+        <VersionInfo resourceName="AM-set-get-status-path" version="SHA-512:ef60edd9544ddcf1f712839068ca50ff3de7949207524a40a33f2955ef9b6c31e6976a1339378ed30ef906aa55884abd92a21c7026a76b95bcd22e725adf8289"/>
+        <VersionInfo resourceName="AM-set-get-status-path-legacy" version="SHA-512:f7eab520cafbd1cc66ec373795b7f4bde624e85be79e11a08eb50472cc5fe23d8438acb5ed9d29c8238f4d0081c3a57c0f3162ea65dc6660ed5b19e386cdef19"/>
+        <VersionInfo resourceName="JS-generic-dial" version="SHA-512:b62839952d2607e48857dd46a4abd3a2a7e4050e39744f62cacd210c7c611ca37db0d8338f4cc55c3d3a3ed7722033d37f5fc3c7810985a2995048410b2487f8"/>
+        <VersionInfo resourceName="KV-get-dial-percent" version="SHA-512:561cf43e0af260e88011ffa6f0e07c340cc9178331f7ca2f2c0dec8ce1dcb74cae803f54fa7fd12fdb3bf6f03a7718e2fd1f75bca8fdd163aef618abaf6793f3"/>
+    </Policies>
+    <ProxyEndpoints>
+        <VersionInfo resourceName="default" version="SHA-512:e620e104395020bbaae2b76d1d539eea39587d685ebbe45ece45e8dc068810731df03b0d4b3e4d37e4de6e024ef157ec18878fff3a3d506673fcb8d28603c9f8"/>
+    </ProxyEndpoints>
+    <Resources>
+        <VersionInfo resourceName="jsc://JS-generic-dial.js" version="SHA-512:eaf01d6889f745f28ecb00124113054c1b5023a4d1f4f614676e0d139be655dc988e049df55a5143519546da3ea4a1638ddab1ec5526b76312478189af19a15d"/>
+    </Resources>
+    <SharedFlows/>
+    <TargetEndpoints>
+        <VersionInfo resourceName="default" version="SHA-512:510712e2cf18aaecead01d1a762e004f3cb8fd2eeea93627559bfb895b3e28e36f157707bb174f0f81a887ed9b3b4532a8cea3cb8e320c33236722e8aba2acb6"/>
+        <VersionInfo resourceName="legacy" version="SHA-512:7de92315e6500093a8b870b628c042f05c043a7e5381d2d572936c2e4b8cd5349e4eb65a855fdc914417679e41cad066c18e6094d74cb993b27247ee634ab29c"/>
+    </TargetEndpoints>
+</Manifest>

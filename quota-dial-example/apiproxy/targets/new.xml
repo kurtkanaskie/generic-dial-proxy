@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TargetEndpoint name="new">
+    <Description/>
+    <FaultRules/>
+    <PreFlow name="PreFlow">
+        <Request/>
+        <Response/>
+    </PreFlow>
+    <PostFlow name="PostFlow">
+        <Request/>
+        <Response/>
+    </PostFlow>
+    <Flows>
+        <Flow name="status">
+            <Description/>
+            <Request>
+                <Step>
+                    <Name>AM-set-get-status-path</Name>
+                </Step>
+            </Request>
+            <Response/>
+            <Condition>(proxy.pathsuffix MatchesPath "/status") and (request.verb = "GET")</Condition>
+        </Flow>
+    </Flows>
+    <HTTPTargetConnection>
+        <Properties/>
+        <LoadBalancer>
+            <Server name="target-migration-new"/>
+        </LoadBalancer>
+        <Path>{statusPath}</Path>
+        <SSLInfo>
+            <Enabled>true</Enabled>
+        </SSLInfo>
+    </HTTPTargetConnection>
+</TargetEndpoint>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Quota async="false" continueOnError="true" enabled="true" name="QU-dial" type="flexi">
+    <DisplayName>QU-dial</DisplayName>
+    <Interval ref="request.header.x-new-interval">1</Interval>
+    <TimeUnit ref="request.header.x-new-quota-timeunit">hour</TimeUnit>
+    <Allow count="10" countRef="request.header.x-every"/>
+    <Distributed>true</Distributed>
+    <Synchronous>true</Synchronous>
+</Quota>

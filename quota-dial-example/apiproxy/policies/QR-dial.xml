@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ResetQuota async="false" continueOnError="false" enabled="true" name="QR-dial">
+    <DisplayName>QR-dial</DisplayName>
+    <Properties/>
+    <Quota name="QU-dial">
+        <Identifier name="_default">
+            <Allow ref="request.header.x-every">10</Allow>
+        </Identifier>
+    </Quota>
+</ResetQuota>

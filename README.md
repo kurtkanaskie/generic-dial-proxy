@@ -1,26 +1,9 @@
-# Generic Dial API
-This proxy demonstrates a simple approach to "dialing" to a new target endpoint.
-The value of the "dialPercent" in the KVM determines the percentage of API calls that will be routed to the new target.
-If "dialPercent" is not set or set to 0, then the legacy target and path is used.
-If "dialPercent" is greater than 1 and less than 99 a random number is used to "estimate" the percentage.
-If "dialPercent" is 100, then the new target and path is used.
-In addition, each target uses a different path suffix.
-
-
-Usage:
-* curl https://{ORG}-{ENV}.apigee.net/migrate-target/status
-
-Responses:
-* Cannot GET /LEG/dialPercent/25/useLegacy/true/random/56.0
-* Cannot GET /new/dialPercent/25/useLegacy/false/random/23.0
-
-This example uses mocktarget.apigee.net and the "Cannot GET" response is expected.
-
-Note the different paths indicating different targets and variable values.
+# Generic Dial API Examples
+This repository contains 2 proxies demonstrating different approaches to "dialing" to a new target endpoint.
 
 ## Setup
-* Clone this repository and `cd proxy-dial-example`
-* Create Target Server new (NOTE: apigeetool has an issue #144)
+* Clone this repository
+* Create Target Servers one time (NOTE: apigeetool has an issue #144 so use curl)
 
 ```
 curl -n -X POST https://api.enterprise.apigee.com/v1/o/$ORG/e/$ENV/targetservers -H 'Content-Type: application/json'   -H 'cache-control: no-cache'   -d '{
@@ -55,10 +38,9 @@ curl -n -X POST https://api.enterprise.apigee.com/v1/o/$ORG/e/$ENV/targetservers
     }
 }'
 ```
-* apigeetool createkvmmap -N -o {ORG} -e {ENV} --mapName generic-dial
-* apigeetool addEntryToKVM -N -o {ORG} -e {ENV} --mapName generic-dial --entryName dialPercent --entryValue 20
-* apigeetool deployproxy -N -o {ORG} -e {ENV} -n proxy-dial-example -d .
-
+* cd to respective proxy directories and follow README there
+  * [README proxy-dial-example](proxy-dial-example/README.md)
+  * [README quota-dial-example](quota-dial-example/README.md)
 
 ## Disclaimer
 

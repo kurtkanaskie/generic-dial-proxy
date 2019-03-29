@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Manifest name="manifest">
+    <Policies>
+        <VersionInfo resourceName="AM-set-get-status-path" version="SHA-512:7bc4963a7fd110770aa92b403ba95822f5875d1e2398dea9ec2c6486d2534c70efb6577cb2c1e945e49ba23808ee7cb00d5322b2172e464eecc1e1f31e47f383"/>
+        <VersionInfo resourceName="AM-set-get-status-path-legacy" version="SHA-512:7f888b7c652aac0eb64e565771e1cdf695a14c82f8f5b20220b5ed4154b31f35012c8a0fdd761edea2c898909f3bb14e5222ec33a68806871f1095134ef8395b"/>
+        <VersionInfo resourceName="QR-dial" version="SHA-512:eb6c40a17dc421456cb5cc62c88c87b330f6e52ff2f3dfd40f9671ada75814800d319895946f5b9d2924c6ed911a7ac2e37d33675353dfc2f91396939003b308"/>
+        <VersionInfo resourceName="QU-dial" version="SHA-512:86e052c5dd74a443c66edf421e2d1007602d5d3f9e06933c1582beb0727fa6b4388c8605147ff142686496a7827fc8f51ba897799e1bec7ea22620b2d9b05701"/>
+    </Policies>
+    <ProxyEndpoints>
+        <VersionInfo resourceName="default" version="SHA-512:74e8cc1afd181bb8a2015296002af81f5c6073c8a3a6060b4f0be40e776b6a0411acc0114e2fb429a22dc27a0cf3519f8a72b5d7e5b921c07916ccb080966037"/>
+    </ProxyEndpoints>
+    <Resources/>
+    <SharedFlows/>
+    <TargetEndpoints>
+        <VersionInfo resourceName="legacy" version="SHA-512:7de92315e6500093a8b870b628c042f05c043a7e5381d2d572936c2e4b8cd5349e4eb65a855fdc914417679e41cad066c18e6094d74cb993b27247ee634ab29c"/>
+        <VersionInfo resourceName="new" version="SHA-512:3da3883920508f8fb6a2627775a22fc22c63f6f8542631cd4c96d157988cd66bce87edd77c54ca8813fac3abf8e921625cba4f84186cf5f2245f55303d90c519"/>
+    </TargetEndpoints>
+</Manifest>
