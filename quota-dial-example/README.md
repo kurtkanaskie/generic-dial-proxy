@@ -1,18 +1,19 @@
 # Quota Dial API
 This proxy demonstrates a simple approach to "dialing" to a new target endpoint.
-The value of the headers `x-dial-to` and `x-every` control the behavior.  
+The value of the headers `x-dial-to` and `x-every` control the behavior. 
+You should use a KVM and variables, headers was quick and easy way to test.  
 - `x-dial-to` takes value of `new` or `legacy` (default goes to legacy)  
 - `x-every` takes a number 0-N and is used as the quota limit.  
 
 The logic is dial-to a target every N calls, pretty simple, you can figure out the percentages, for example:  
->x-dial-to:new x-every:10 calls is 10% traffic to new.  
->x-dial-to:legacy x-every:10 calls is 90% traffic to new.  
->x-dial-to:new x-every:0 calls is ALL traffic to new.  
->x-dial-to:legacy x-every:0 calls is ALL traffic to legacy.  
 >no headers ALL traffic to legacy.
+>0%   to new: x-dial-to:legacy x-every:0 calls.  
+>10%  to new: x-dial-to:new    x-every:10 calls.  
+>90%  to new: x-dial-to:legacy x-every:10 calls.  
+>100% to new: x-dial-to:new    x-every:0 calls.  
 
 Usage and Response:  
-10% to new
+10% to new, 90% to legacy
 ```
 for (( i=1; i <= 20; ++i )); do curl https://{ORG}-{ENV}.apigee.net/quota-dial/status -H x-dial-to:legacy -H x-every:10; done
 Cannot GET /v1/dialTo=new/every=10/target=legacy/allowed=10/used=1/avail=9
@@ -29,7 +30,7 @@ Cannot GET /v2/dialTo=new/every=10/target=new
 Cannot GET /v1/dialTo=new/every=10/target=legacy/allowed=10/used=1/avail=9
 ```
 
-10% to legacy
+90% to new, 10% to legacy
 ```
 $ for (( i=1; i <= 20; ++i )); do curl https://{ORG}-{ENV}.apigee.net/quota-dial/status -H x-dial-to:legacy -H x-every:10; done
 Cannot GET /v2/dialTo=legacy/every=10/target=new
