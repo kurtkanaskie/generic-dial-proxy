@@ -6,11 +6,13 @@ You should use a KVM and variables, headers was quick and easy way to test.
 - `x-every` takes a number 0-N and is used as the quota limit.  
 
 The logic is dial-to a target every N calls, pretty simple, you can figure out the percentages, for example:  
->no headers ALL traffic to legacy.
->0%   to new: x-dial-to:legacy x-every:0 calls.  
->10%  to new: x-dial-to:new    x-every:10 calls.  
->90%  to new: x-dial-to:legacy x-every:10 calls.  
->100% to new: x-dial-to:new    x-every:0 calls.  
+```
+No headers ALL traffic to legacy.  
+0%   to new: x-dial-to:legacy x-every:0 calls.  
+10%  to new: x-dial-to:new    x-every:10 calls.  
+90%  to new: x-dial-to:legacy x-every:10 calls.  
+100% to new: x-dial-to:new    x-every:0 calls.  
+```
 
 Usage and Response:  
 10% to new, 90% to legacy
