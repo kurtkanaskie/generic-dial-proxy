@@ -55,17 +55,17 @@ This example uses mocktarget.apigee.net and the "Cannot GET" response is expecte
 Note the different paths indicating different targets and variable values.
 
 ## Setup (be sure to create Target Servers first)
-* apigeetool createkvmmap -N -o $ORG -e $ENV --mapName quota-dial-example
-* apigeetool addEntryToKVM -N -o $ORG -e $ENV --mapName quota-dial-example --entryName dial-to --entryValue new
-* apigeetool addEntryToKVM -N -o $ORG -e $ENV --mapName quota-dial-example --entryName every --entryValue 10
-* apigeetool deployproxy -N -o $ORG -e $ENV -n quota-dial-example -d .
+> apigeetool createkvmmap -N -o $ORG -e $ENV --mapName quota-dial-example  
+> apigeetool addEntryToKVM -N -o $ORG -e $ENV --mapName quota-dial-example --entryName dial-to --entryValue new  
+> apigeetool addEntryToKVM -N -o $ORG -e $ENV --mapName quota-dial-example --entryName every --entryValue 10  
+> apigeetool deployproxy -N -o $ORG -e $ENV -n quota-dial-example -d .  
 
 ## Operation
 Use the UI to change the values in the KVM or use apigeetool:
-* apigeetool deleteKVMEntry -N -o $ORG -e $ENV --mapName quota-dial-example --entryName dial-to
-* apigeetool deleteKVMEntry -N -o $ORG -e $ENV --mapName quota-dial-example --entryName every
-* apigeetool addEntryToKVM -N -o $ORG -e $ENV --mapName quota-dial-example --entryName dial-to --entryValue legacy
-* apigeetool addEntryToKVM -N -o $ORG -e $ENV --mapName quota-dial-example --entryName every --entryValue 5
+> apigeetool deleteKVMEntry -N -o $ORG -e $ENV --mapName quota-dial-example --entryName dial-to  
+> apigeetool deleteKVMEntry -N -o $ORG -e $ENV --mapName quota-dial-example --entryName every  
+> apigeetool addEntryToKVM -N -o $ORG -e $ENV --mapName quota-dial-example --entryName dial-to --entryValue legacy  
+> apigeetool addEntryToKVM -N -o $ORG -e $ENV --mapName quota-dial-example --entryName every --entryValue 5  
 
 ## Disclaimer
 
