@@ -5,11 +5,23 @@
     <PreFlow name="PreFlow">
         <Request>
             <Step>
+                <Name>KV-dial-params</Name>
+            </Step>
+            <Step>
                 <Name>QU-dial</Name>
             </Step>
             <Step>
                 <Condition>(ratelimit.QU-dial.failed = true)</Condition>
                 <Name>QR-dial</Name>
+            </Step>
+            <Step>
+                <!-- multi-lines require a space at end of each line -->
+                <Condition>
+                    ((ratelimit.QU-dial.failed = true) AND (dial-to = "new")) 
+                    OR 
+                    ((ratelimit.QU-dial.failed = false) AND (dial-to = "legacy")) 
+                </Condition>
+                <Name>AM-route-to-new</Name>
             </Step>
         </Request>
         <Response/>
@@ -32,20 +44,8 @@
         <VirtualHost>secure</VirtualHost>
     </HTTPProxyConnection>
     <RouteRule name="new">
-        <Condition>(ratelimit.QU-dial.failed = true) AND (request.header.x-dial-to = "new")</Condition>
+        <Condition>(use-new = true)</Condition>
         <TargetEndpoint>new</TargetEndpoint>
-    </RouteRule>
-    <RouteRule name="legacy">
-        <Condition>(ratelimit.QU-dial.failed = true) AND ( request.header.x-dial-to = "legacy")</Condition>
-        <TargetEndpoint>legacy</TargetEndpoint>
-    </RouteRule>
-    <RouteRule name="new">
-        <Condition>(ratelimit.QU-dial.failed = false) AND (request.header.x-dial-to = "legacy")</Condition>
-        <TargetEndpoint>new</TargetEndpoint>
-    </RouteRule>
-    <RouteRule name="legacy">
-        <Condition>(ratelimit.QU-dial.failed = false) AND (request.header.x-dial-to = "new")</Condition>
-        <TargetEndpoint>legacy</TargetEndpoint>
     </RouteRule>
     <RouteRule name="legacy">
         <TargetEndpoint>legacy</TargetEndpoint>

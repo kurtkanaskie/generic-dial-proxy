@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<KeyValueMapOperations async="false" continueOnError="false" enabled="true" name="KV-dial-params" mapIdentifier="quota-dial-example">
+    <DisplayName>KV-dial-params</DisplayName>
+    <ExpiryTimeInSecs>10</ExpiryTimeInSecs>
+    <Get assignTo="dial-to" index="1">
+        <Key>
+            <Parameter>dial-to</Parameter>
+        </Key>
+    </Get>
+    <Get assignTo="every" index="1">
+        <Key>
+            <Parameter>every</Parameter>
+        </Key>
+    </Get>
+    <Scope>environment</Scope>
+</KeyValueMapOperations>

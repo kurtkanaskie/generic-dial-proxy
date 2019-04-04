@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Manifest name="manifest">
     <Policies>
-        <VersionInfo resourceName="AM-set-get-status-path" version="SHA-512:7bc4963a7fd110770aa92b403ba95822f5875d1e2398dea9ec2c6486d2534c70efb6577cb2c1e945e49ba23808ee7cb00d5322b2172e464eecc1e1f31e47f383"/>
-        <VersionInfo resourceName="AM-set-get-status-path-legacy" version="SHA-512:7f888b7c652aac0eb64e565771e1cdf695a14c82f8f5b20220b5ed4154b31f35012c8a0fdd761edea2c898909f3bb14e5222ec33a68806871f1095134ef8395b"/>
-        <VersionInfo resourceName="QR-dial" version="SHA-512:eb6c40a17dc421456cb5cc62c88c87b330f6e52ff2f3dfd40f9671ada75814800d319895946f5b9d2924c6ed911a7ac2e37d33675353dfc2f91396939003b308"/>
-        <VersionInfo resourceName="QU-dial" version="SHA-512:86e052c5dd74a443c66edf421e2d1007602d5d3f9e06933c1582beb0727fa6b4388c8605147ff142686496a7827fc8f51ba897799e1bec7ea22620b2d9b05701"/>
+        <VersionInfo resourceName="AM-route-to-new" version="SHA-512:02a1f7800f9f96b51ea6fe1c1fe8d518475476d4db9862603e672056a34bde40e3a1afa42aae34d32ba16340794787954a06a6a845875848d9ed9ca344baa1e3"/>
+        <VersionInfo resourceName="AM-set-get-status-path" version="SHA-512:03449606e1e4b072b49e9644fdf1992fda6267f4411ea725e190887ef0e82dbf1ca1b022b2d6f2d6ea2a1b016a05504b2f23ed1f572fb3d62bcc6dba5da16380"/>
+        <VersionInfo resourceName="AM-set-get-status-path-legacy" version="SHA-512:78e4d8b778d25ff767b7d7e51d7b1f980d7e039975deb2d2f93499841de8fbd03e6fd7c127c663ad5cbda61f2c0356dc52ae3814df86ff99b0c1158c51941769"/>
+        <VersionInfo resourceName="KV-dial-params" version="SHA-512:0faed0670c22ee3d339518896861a923bbc0daf8af37aa3e7e7c3a2b328e602b76ad113cbc240bc0984e27b5cdc5f3bf17285ea1b8bba1516d52b0730ceb2704"/>
+        <VersionInfo resourceName="QR-dial" version="SHA-512:89c5c2561b50a72894447def14976f2a6c0c5f40f0fa8c4a94dd40f99e7bf87787c6dd1fccd58b8405713111f24c9760f6e7cc195a0da62e332500ff55805a4b"/>
+        <VersionInfo resourceName="QU-dial" version="SHA-512:4cf946bb191f1f6979dc29e9f365909115d32e46de20e4d63087ab092b04c46e5d6097fa1b06ce2a65449fe0255c57b3eed6ee64a61b07b3dfe6b834c282b044"/>
     </Policies>
     <ProxyEndpoints>
-        <VersionInfo resourceName="default" version="SHA-512:74e8cc1afd181bb8a2015296002af81f5c6073c8a3a6060b4f0be40e776b6a0411acc0114e2fb429a22dc27a0cf3519f8a72b5d7e5b921c07916ccb080966037"/>
+        <VersionInfo resourceName="default" version="SHA-512:0b8c8d8d2d3ee12e0a870c685cf61d2fd0768b87f949819516fdcbe71d821fd211630694197e1c7c365e0c0710ee5bca8ff45120eb5f1d8583356d08f706f49b"/>
     </ProxyEndpoints>
     <Resources/>
     <SharedFlows/>

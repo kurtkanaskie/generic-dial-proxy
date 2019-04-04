@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<APIProxy revision="5" name="quota-dial-example">
+<APIProxy revision="9" name="quota-dial-example">
     <Basepaths>/oapi-barcode</Basepaths>
     <ConfigurationVersion majorVersion="4" minorVersion="0"/>
     <CreatedAt>1553869918716</CreatedAt>
     <CreatedBy>kurtkanaskie@google.com</CreatedBy>
-    <Description></Description>
+    <Description>Repo: https://github.com/kurtkanaskie/generic-dial-proxy</Description>
     <DisplayName>dial-proxy</DisplayName>
-    <LastModifiedAt>1553875428227</LastModifiedAt>
+    <LastModifiedAt>1554415689928</LastModifiedAt>
     <LastModifiedBy>kurtkanaskie@google.com</LastModifiedBy>
-    <ManifestVersion>SHA-512:241c57af5153edf3d4762ca796f22582b886fc3f1f1e91e6915abea8ec07c04eaeec2cdf1e62a86cfa1ca3c9535377bc69c7cbfe32dcb9f53cf1229e81b0bbee</ManifestVersion>
+    <ManifestVersion>SHA-512:e3e71cacaef8a949d7837be0a3ce8a0328119314acfef4c76e2792c428dd9b040f6f286e637c736fd36eef2fc570e398ccd3abedbc36faae8bd822bfcb033d58</ManifestVersion>
     <Policies>
+        <Policy>AM-route-to-new</Policy>
         <Policy>AM-set-get-status-path-legacy</Policy>
         <Policy>AM-set-get-status-path</Policy>
+        <Policy>KV-dial-params</Policy>
         <Policy>QR-dial</Policy>
         <Policy>QU-dial</Policy>
     </Policies>

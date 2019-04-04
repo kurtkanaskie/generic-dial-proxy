@@ -9,7 +9,7 @@
     </AssignVariable>
     <AssignVariable>
         <Name>statusPathLegacy</Name>
-        <Template>/v1/dialTo={request.header.x-dial-to}/every={request.header.x-every}/target={target.name}/allowed={ratelimit.QU-dial.allowed.count}/used={ratelimit.QU-dial.used.count}/avail={ratelimit.QU-dial.available.count}</Template>
+        <Template>/v1/dial-to={dial-to}/every={every}/use-new={use-new}/target={target.name}/allowed={ratelimit.QU-dial.allowed.count}/used={ratelimit.QU-dial.used.count}/avail={ratelimit.QU-dial.available.count}</Template>
     </AssignVariable>
     <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
 </AssignMessage>

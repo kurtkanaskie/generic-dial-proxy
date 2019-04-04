@@ -4,7 +4,7 @@
     <Properties/>
     <Quota name="QU-dial">
         <Identifier name="_default">
-            <Allow ref="request.header.x-every">10</Allow>
+            <Allow ref="every">10</Allow>
         </Identifier>
     </Quota>
 </ResetQuota>
